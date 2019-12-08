@@ -19,7 +19,7 @@
       class="is-primary"
       size="is-large"
       tag="router-link"
-      to="/page-4"
+      to="/confirm-name"
       expanded
     >
       Conto sim

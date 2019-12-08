@@ -56,7 +56,7 @@ export default {
           { label: 'Balle de Dança', value: 'bale' },
           { label: 'Bares', value: 'bar' },
           { label: 'Restaurantes', value: 'restaurante' },
-          { label: 'Boate', value: 'boate' },
+          { label: 'Ópera', value: 'opera' },
         ],
       },
       {

@@ -6,7 +6,12 @@ Vue.use(VueRouter);
 const routes = [
   {
     path: '/',
-    redirect: 'page-1',
+    redirect: 'home',
+  },
+  {
+    path: '/home',
+    name: 'home',
+    component: () => import(/* webpackChunkName: "pages" */ '../views/wireframes/Homescreen.vue'),
   },
   {
     path: '/sandbox',
@@ -14,38 +19,33 @@ const routes = [
     component: () => import(/* webpackChunkName: "sandbox" */ '../views/Sandbox.vue'),
   },
   {
-    path: '/page-1',
-    name: 'page-1',
+    path: '/confirm-name',
+    name: 'confirm-name',
     component: () => import(/* webpackChunkName: "pages" */ '../views/wireframes/ConfirmName.vue'),
   },
   {
-    path: '/page-2',
-    name: 'page-2',
-    component: () => import(/* webpackChunkName: "pages" */ '../views/wireframes/Passcode.vue'),
-  },
-  {
-    path: '/page-3',
-    name: 'page-3',
+    path: '/welcome',
+    name: 'welcome',
     component: () => import(/* webpackChunkName: "pages" */ '../views/wireframes/WelcomeAI.vue'),
   },
   {
-    path: '/page-4',
-    name: 'page-4',
+    path: '/questions',
+    name: 'questions',
     component: () => import(/* webpackChunkName: "pages" */ '../views/wireframes/FormContainer.vue'),
   },
   {
-    path: '/page-5',
-    name: 'page-5',
-    component: () => import(/* webpackChunkName: "pages" */ '../views/wireframes/ChooseAction.vue'),
+    path: '/normal-chat',
+    name: 'normal-chat',
+    component: () => import(/* webpackChunkName: "pages" */ '../views/wireframes/NormalChat.vue'),
   },
   {
-    path: '/page-6',
-    name: 'page-6',
-    component: () => import(/* webpackChunkName: "pages" */ '../views/wireframes/Messenger.vue'),
+    path: '/promo-chat',
+    name: 'promo-chat',
+    component: () => import(/* webpackChunkName: "pages" */ '../views/wireframes/PromoChat.vue'),
   },
   {
     path: '*',
-    redirect: 'page-1',
+    redirect: 'home',
   },
 ];
 

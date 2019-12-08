@@ -1,7 +1,6 @@
 <template>
   <div>
-    <p class="is-size-3 mb-3"><b>Olá,</b></p>
-    <p class="is-size-4 mb-6">Vamos confirmar algumas informações?</p>
+    <p class="is-size-4 pt-4 mb-6">Vamos confirmar algumas informações?</p>
 
     <b-field
       label="O seu nome é..."
@@ -16,7 +15,7 @@
     </b-field>
 
     <b-field
-      label="E o seu email?"
+      label="E o seu email..."
       custom-class="is-large"
     >
       <b-input
@@ -31,10 +30,10 @@
       class="is-primary"
       size="is-large"
       tag="router-link"
-      to="/page-2"
+      to="/questions"
       expanded
       :disabled="!isFilled"
-    >Pronto</b-button>
+    >Sim</b-button>
 
   </div>
 </template>
@@ -43,8 +42,8 @@
 export default {
   name: 'ConfirmName',
   data: () => ({
-    name: '',
-    email: '',
+    name: 'Teresa Gonçalves',
+    email: 'teresa.goncalves@gmail.com',
   }),
   computed: {
     isFilled() {

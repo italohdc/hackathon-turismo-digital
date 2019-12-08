@@ -1,14 +1,23 @@
 <template>
   <div id="app">
-    <div class="aligner">
-      <div class="blank-align"></div>
-      <div class="box full-height flex-align">
+    <div>
+      <div class="box full-height">
+        <Header />
         <router-view class="route-link" />
       </div>
-      <div class="blank-align"></div>
     </div>
   </div>
 </template>
+
+<script>
+import Header from './components/molecules/Header.vue';
+
+export default {
+  components: {
+    Header,
+  },
+};
+</script>
 
 <style lang="scss">
 #app {
@@ -31,23 +40,6 @@
   height: 100%;
   margin: auto;
   max-width: 510px;
-}
-
-.flex-align {
-  display: -ms-flexbox;
-  display: -webkit-flex;
-  display: flex;
-
-  -ms-flex-align: center;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-
-  align-items: center;
-}
-
-.blank-align {
-  height: 100%;
-  margin: auto;
 }
 
 .fade-enter-active {
