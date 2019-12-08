@@ -50,11 +50,8 @@
 
 <script>
 import { HollowDotsSpinner } from 'epic-spinners';
+import { mapActions, mapState } from 'vuex';
 import ChatBox from '../molecules/ChatBox.vue';
-
-function timeout(ms) {
-  return new Promise(resolve => setTimeout(resolve, ms));
-}
 
 export default {
   name: 'Messages',
@@ -66,34 +63,34 @@ export default {
     initialChat: Array,
   },
   data: () => ({
-    messages: [],
     newMessage: '',
-    isTyping: false,
   }),
   methods: {
-    sendNewMessage() {
-      this.messages.push({
+    ...mapActions({
+      firstPopulateChat: 'firstPopulateChat',
+      sendMessageToAction: 'sendNewMessage',
+      getNewMessageFromAction: 'generateNewAnswer',
+    }),
+    async sendNewMessage() {
+      const message = {
         isFromUser: true,
         text: this.newMessage,
-      });
+      };
 
+      await this.sendMessageToAction(message);
       this.newMessage = '';
+
+      await this.getNewMessageFromAction(message);
     },
   },
+  computed: {
+    ...mapState({
+      messages: state => state.messages,
+      isTyping: state => state.isTyping,
+    }),
+  },
   async created() {
-    for (let index = 0; index < this.initialChat.length; index++) {
-      this.isTyping = true;
-      const message = this.initialChat[index];
-
-      // eslint-disable-next-line no-await-in-loop
-      await timeout(1200);
-      this.messages.push({
-        isFromUser: message.isFromUser,
-        text: message.text,
-      });
-
-      this.isTyping = false;
-    }
+    this.firstPopulateChat(this.initialChat);
   },
 };
 </script>
