@@ -50,7 +50,7 @@
 
 <script>
 import { HollowDotsSpinner } from 'epic-spinners';
-import { mapActions, mapState } from 'vuex';
+import { mapActions, mapState, mapMutations } from 'vuex';
 import ChatBox from '../molecules/ChatBox.vue';
 
 export default {
@@ -66,6 +66,9 @@ export default {
     newMessage: '',
   }),
   methods: {
+    ...mapMutations({
+      clearMessages: 'CLEAR_MESSAGES',
+    }),
     ...mapActions({
       firstPopulateChat: 'firstPopulateChat',
       sendMessageToAction: 'sendNewMessage',
@@ -90,7 +93,8 @@ export default {
     }),
   },
   async created() {
-    this.firstPopulateChat(this.initialChat);
+    this.clearMessages();
+    await this.firstPopulateChat(this.initialChat);
   },
 };
 </script>

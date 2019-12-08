@@ -17,6 +17,9 @@ export default new Vuex.Store({
         isFromUser,
       });
     },
+    CLEAR_MESSAGES(state) {
+      state.messages = [];
+    },
     CHANGE_BOT_TYPING_STATUS(state, status) {
       state.isTyping = status;
     },
@@ -43,6 +46,9 @@ export default new Vuex.Store({
     async firstPopulateChat({ commit, dispatch }, initialChat) {
       for (let index = 0; index < initialChat.length; index++) {
         const message = initialChat[index];
+
+        // eslint-disable-next-line no-await-in-loop
+        await new Promise(resolve => setTimeout(resolve, 200));
         commit('CHANGE_BOT_TYPING_STATUS', true);
 
         // eslint-disable-next-line no-await-in-loop
