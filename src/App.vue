@@ -1,53 +1,47 @@
 <template>
   <div id="app">
-    <div class="aligner">
-      <div class="blank-align"></div>
-      <div class="box full-height flex-align">
+    <div>
+      <div class="box main-container">
+        <Header />
         <router-view class="route-link" />
       </div>
-      <div class="blank-align"></div>
     </div>
   </div>
 </template>
 
+<script>
+import Header from './components/molecules/Header.vue';
+
+export default {
+  components: {
+    Header,
+  },
+};
+</script>
+
 <style lang="scss">
+@import './styles/variables.scss';
+
 #app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
+  font-family: 'Lato', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: left;
-  color: #2c3e50;
+  color: $primary;
 
   width: 100%;
   min-height: 100vh;
 
-  padding: 25px;
+  padding: 8px;
   background-color: #eeeeee;
 }
 </style>
 
 <style lang="scss" scoped>
-.full-height {
+.main-container {
   height: 100%;
   margin: auto;
   max-width: 510px;
-}
-
-.flex-align {
-  display: -ms-flexbox;
-  display: -webkit-flex;
-  display: flex;
-
-  -ms-flex-align: center;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-
-  align-items: center;
-}
-
-.blank-align {
-  height: 100%;
-  margin: auto;
 }
 
 .fade-enter-active {

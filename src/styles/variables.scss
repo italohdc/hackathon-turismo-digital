@@ -1,0 +1,12 @@
+// Set your colors
+$primary: #005AA2;
+$primary-invert: findColorInvert($primary);
+$secondary: #2D8ABD;
+$secondary-invert: findColorInvert($secondary);
+$danger: #DD1517;
+$danger-invert: findColorInvert(#DD1517);
+
+$success: #1ABC9C;
+$success-invert: findColorInvert(#1ABC9C);
+$warning: #F6511D;
+$warning-invert: findColorInvert(#F6511D);

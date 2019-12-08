@@ -1,28 +1,41 @@
 <template>
-  <div>
+  <div class="has-text-primary">
     <div class="has-text-centered">
       <PersonaPic class="center" />
     </div>
 
-    <p class="is-size-3">
-      Olá,
-    </p>
-    <p class="is-size-4 mb-5">
-      Sou a <b>Margareth</b> e vou te ajudar.
+    <p class="is-size-4 mb-4">
+      <b>
+        Eu sou a Maitê e vou ser a sua companhia
+        durante toda a sua viagem
+      </b>
     </p>
 
-    <p class="is-size-4 mb-5">
-      Me conta algumas coisas sobre você?
+    <p class="is-size-6 mb-5">
+      Para que a nossa viagem seja incrível,
+      preciso que você me responda algumas
+      perguntas rápidas.
     </p>
 
     <b-button
       class="is-primary"
       size="is-large"
       tag="router-link"
-      to="/page-4"
+      to="/confirm-name"
       expanded
+      rounded
     >
-      Conto sim
+      Vamos lá!
+    </b-button>
+
+    <b-button
+      class="is-text mt-4"
+      tag="router-link"
+      to="/home"
+      expanded
+      rounded
+    >
+      Agora não
     </b-button>
   </div>
 </template>

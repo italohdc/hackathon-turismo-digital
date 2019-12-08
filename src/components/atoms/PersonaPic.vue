@@ -1,6 +1,6 @@
 <template>
   <figure class="image persona-pic is-inline-block">
-    <img src="../../assets/margareth.jpg" class="is-rounded">
+    <img src="../../assets/hello_img.png">
   </figure>
 </template>
 

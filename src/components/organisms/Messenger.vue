@@ -50,7 +50,7 @@
 
 <script>
 import { HollowDotsSpinner } from 'epic-spinners';
-import ChatBox from '../../components/molecules/ChatBox.vue';
+import ChatBox from '../molecules/ChatBox.vue';
 
 function timeout(ms) {
   return new Promise(resolve => setTimeout(resolve, ms));
@@ -61,6 +61,9 @@ export default {
   components: {
     ChatBox,
     HollowDotsSpinner,
+  },
+  props: {
+    initialChat: Array,
   },
   data: () => ({
     messages: [],
@@ -78,25 +81,19 @@ export default {
     },
   },
   async created() {
-    this.isTyping = true;
+    for (let index = 0; index < this.initialChat.length; index++) {
+      this.isTyping = true;
+      const message = this.initialChat[index];
 
-    await timeout(2000);
-    this.messages.push({
-      isFromUser: false,
-      text: 'Olá, aqui é a Margareth',
-    });
+      // eslint-disable-next-line no-await-in-loop
+      await timeout(1200);
+      this.messages.push({
+        isFromUser: message.isFromUser,
+        text: message.text,
+      });
 
-    this.isTyping = false;
-    await timeout(800);
-    this.isTyping = true;
-
-    await timeout(2000);
-    this.messages.push({
-      isFromUser: false,
-      text: 'Como eu posso te ajudar?',
-    });
-
-    this.isTyping = false;
+      this.isTyping = false;
+    }
   },
 };
 </script>
