@@ -28,6 +28,7 @@
           v-model="newMessage"
           size="is-large"
           placeholder="Digite sua mensagem..."
+          class="input-bar"
           @keydown.native.enter="sendNewMessage()"
         />
         <p class="control">
@@ -111,7 +112,7 @@ export default {
 }
 
 .input-bar {
-  margin-top: auto;
+  width: 100%;
 }
 
 .fade-enter-active, .fade-leave-active {

@@ -4,7 +4,7 @@
       <div class="blank-align"></div>
       <div class="box full-height flex-align">
         <transition name="fade">
-          <router-view/>
+          <router-view class="route-link" />
         </transition>
       </div>
       <div class="blank-align"></div>
@@ -31,8 +31,8 @@
 <style lang="scss" scoped>
 .full-height {
   height: 100%;
-  margin-top: auto;
-  margin-bottom: auto;
+  margin: auto;
+  max-width: 510px;
 }
 
 .flex-align {
@@ -58,5 +58,9 @@
 
 .fade-enter {
   opacity: 0;
+}
+
+.route-link {
+  width: 100%;
 }
 </style>
