@@ -1,24 +1,17 @@
 import Vue from 'vue';
 import VueRouter from 'vue-router';
-import Home from '../views/Home.vue';
 
 Vue.use(VueRouter);
 
 const routes = [
   {
     path: '/',
-    name: 'home',
-    component: Home,
+    redirect: 'page-1',
   },
   {
     path: '/sandbox',
     name: 'sandbox',
     component: () => import(/* webpackChunkName: "sandbox" */ '../views/Sandbox.vue'),
-  },
-  {
-    path: '/wireframe',
-    name: 'wireframe',
-    component: () => import(/* webpackChunkName: "wireframe" */ '../views/wireframes/ConfirmName.vue'),
   },
   {
     path: '/page-1',
