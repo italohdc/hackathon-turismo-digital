@@ -10,6 +10,8 @@
 
 O Vue.js é um framework de desenvolvimento de SPA (single-page application). Apesar de existirem outras opções semelhantes, como o React e o Angular, escolhemos o Vue devido ao tamanho pequeno do projeto inicial, à nossa familiaridade com o framework e à facilidade em dividir a aplicação em componentes reutilizáveis.
 
+Além disso, para facilitar o gerenciamento de estados globais da aplicação, adicionamos o Vuex ao projeto.
+
 ### Atomic Design
 
 Neste projeto, organizamos os componentes do Front-End utilizando o Atomic Design.
