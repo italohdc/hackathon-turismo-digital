@@ -5,6 +5,7 @@ import router from './router';
 import store from './store';
 
 import 'buefy/dist/buefy.css';
+import './assets/spacing-helpers.scss';
 
 Vue.use(Buefy);
 
