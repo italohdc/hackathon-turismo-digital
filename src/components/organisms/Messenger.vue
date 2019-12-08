@@ -88,7 +88,7 @@ export default {
       // eslint-disable-next-line no-await-in-loop
       await timeout(1200);
       this.messages.push({
-        isFromUser: false,
+        isFromUser: message.isFromUser,
         text: message.text,
       });
 

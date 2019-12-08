@@ -3,7 +3,7 @@
     <p class="is-size-4 pt-4 mb-6">Vamos confirmar algumas informações?</p>
 
     <b-field
-      label="O seu nome é..."
+      label="O seu nome é"
       custom-class="is-large"
     >
       <b-input
@@ -15,7 +15,7 @@
     </b-field>
 
     <b-field
-      label="E o seu email..."
+      label="E o seu email"
       custom-class="is-large"
     >
       <b-input
@@ -32,6 +32,7 @@
       tag="router-link"
       to="/questions"
       expanded
+      rounded
       :disabled="!isFilled"
     >Sim</b-button>
 
@@ -42,8 +43,8 @@
 export default {
   name: 'ConfirmName',
   data: () => ({
-    name: 'Teresa Gonçalves',
-    email: 'teresa.goncalves@gmail.com',
+    name: 'Tereza Gonçalves',
+    email: 'tereza@gmail.com',
   }),
   computed: {
     isFilled() {

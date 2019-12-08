@@ -4,6 +4,7 @@
       v-model="position"
       :has-navigation="false"
       size="is-large"
+      :animated="false"
     >
       <b-step-item
         v-for="(question, index) in questions"
@@ -32,40 +33,39 @@ export default {
     position: 0,
     questions: [
       {
-        text: 'Porque você está viajando para Brasília?',
+        text: 'Porque você está viajando para Belo Horizonte?',
         icon: 'airplane-takeoff',
         options: [
-          { label: 'Viajando por lazer', value: 'lazer' },
-          { label: 'Viajando por trabalho', value: 'trabalho' },
-          { label: 'Viajando de férias', value: 'ferias' },
+          { label: 'Lazer', value: 'lazer' },
+          { label: 'Trabalho', value: 'trabalho' },
+          { label: 'Férias', value: 'ferias' },
         ],
       },
       {
         text: 'Qual tipo de comida que você gosta?',
         icon: 'food-apple',
         options: [
-          { label: 'Culinária Italiana', value: 'italiana' },
-          { label: 'Culinária Japonesa', value: 'japonesa' },
           { label: 'Culinária Mineira', value: 'mineira' },
+          { label: 'Culinária Japonesa', value: 'japonesa' },
+          { label: 'Culinária Italiana', value: 'italiana' },
         ],
       },
       {
-        text: 'Em um sábado a noite, aonde você gosta de ir?',
+        text: 'Em um sábado a noite, aonde você gostaria de ir?',
         icon: 'music',
         options: [
-          { label: 'Balle de Dança', value: 'bale' },
+          { label: 'Restaurante', value: 'restaurante' },
+          { label: 'Orquestra Sinfônica', value: 'opera' },
           { label: 'Bares', value: 'bar' },
-          { label: 'Restaurantes', value: 'restaurante' },
-          { label: 'Ópera', value: 'opera' },
         ],
       },
       {
         text: 'Qual a melhor forma de falar com você?',
         icon: 'forum',
         options: [
-          { label: 'Email', value: 'email' },
           { label: 'Telefone', value: 'telefone' },
           { label: 'WhatsApp', value: 'whatsapp' },
+          { label: 'Email', value: 'email' },
           { label: 'SMS', value: 'sms' },
         ],
       },

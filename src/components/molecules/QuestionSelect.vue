@@ -10,6 +10,7 @@
         class="mt-5 is-secondary"
         size="is-large"
         expanded
+        rounded
         @click="sendOption(option)"
         :outlined="selected && option.value !== selected"
       >

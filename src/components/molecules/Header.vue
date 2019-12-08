@@ -17,12 +17,16 @@
         rounded
       />
 
-      <b-button class="ml-4" size="is-large" rounded>
+      <b-button
+        class="ml-4 is-hidden-mobile"
+        size="is-large"
+        rounded
+      >
         Sair
       </b-button>
     </div>
 
-    <div v-else>
+    <div v-else-if="isChat">
       <b-button
         icon-left="close"
         tag="router-link"
@@ -40,6 +44,10 @@ export default {
     isHome() {
       return this.$route.path === '/home';
     },
+    isChat() {
+      const { path } = this.$route;
+      return path === '/normal-chat' || path === '/promo-chat';
+    },
   },
 };
 </script>
@@ -55,16 +63,16 @@ export default {
   margin-top: auto;
   margin-bottom: auto;
   img {
-    height: 60px;
+    height: 50px;
     width: auto;
   }
 }
 
 .logo-default {
-  margin-left: auto;
+  margin-left: 24px;
   margin-right: auto;
   img {
-    height: 28px;
+    height: 32px;
     width: auto;
   }
 }

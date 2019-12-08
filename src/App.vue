@@ -1,7 +1,7 @@
 <template>
   <div id="app">
     <div>
-      <div class="box full-height">
+      <div class="box main-container">
         <Header />
         <router-view class="route-link" />
       </div>
@@ -20,23 +20,25 @@ export default {
 </script>
 
 <style lang="scss">
+@import './styles/variables.scss';
+
 #app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
+  font-family: 'Lato', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: left;
-  color: #2c3e50;
+  color: $primary;
 
   width: 100%;
   min-height: 100vh;
 
-  padding: 25px;
+  padding: 8px;
   background-color: #eeeeee;
 }
 </style>
 
 <style lang="scss" scoped>
-.full-height {
+.main-container {
   height: 100%;
   margin: auto;
   max-width: 510px;

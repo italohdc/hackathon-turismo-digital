@@ -14,9 +14,9 @@ export default {
   },
   data: () => ({
     initialChat: [
-      { text: 'Olá, aqui é a Maitê' },
-      { text: 'Por acaso as suas milhas acabam sempre vencendo?' },
-      { text: 'Você sabia que pode vender as suas milhas? Sim, algumas empresas fornecem esse serviço.' },
+      { text: 'Nossa, a nossa viagem foi incrível!' },
+      { text: 'Tava olhando a sua carteira e achei várias milhas sobrando!' },
+      { text: 'E agora que você está de volta, vocé sabe o que fazer com as suas milhas?' },
     ],
   }),
 };
