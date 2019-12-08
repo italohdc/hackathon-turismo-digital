@@ -74,7 +74,7 @@ export default {
   methods: {
     goNext() {
       const { position } = this;
-      if (position >= this.questions.length - 1) this.$router.push('/pages-5');
+      if (position >= this.questions.length - 1) this.$router.push('/page-5');
       else this.position = this.position + 1;
     },
   },

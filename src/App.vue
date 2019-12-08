@@ -2,7 +2,7 @@
   <div id="app">
     <div class="aligner">
       <div class="blank-align"></div>
-      <div class="box full-height is-vcentered">
+      <div class="box full-height flex-align">
         <transition name="fade">
           <router-view/>
         </transition>
@@ -31,6 +31,25 @@
 <style lang="scss" scoped>
 .full-height {
   height: 100%;
+  margin-top: auto;
+  margin-bottom: auto;
+}
+
+.flex-align {
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+
+  -ms-flex-align: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+
+  align-items: center;
+}
+
+.blank-align {
+  height: 100%;
+  margin: auto;
 }
 
 .fade-enter-active {

@@ -46,6 +46,11 @@ const routes = [
     component: () => import(/* webpackChunkName: "pages" */ '../views/wireframes/ChooseAction.vue'),
   },
   {
+    path: '/page-6',
+    name: 'page-6',
+    component: () => import(/* webpackChunkName: "pages" */ '../views/wireframes/Messenger.vue'),
+  },
+  {
     path: '*',
     redirect: 'page-1',
   },
