@@ -16,6 +16,11 @@ const phraseGenerator = (phrase) => {
     italiano: 'O restaurante da mama faz um grande sucesso, gostaria de ir la?',
     frances: 'O restaurante do Jaqckin faz um grande sucesso, gostaria de ir la?',
     lanche: 'A lanchonete da zeze fica proxima gostaria de ir la',
+    ola: 'Olá, como posso ajudar?',
+    oi: 'Oi como vc está ? como posso ajudar?',
+    japones: 'Temos o restaurante shimshom sushi aqui perto',
+    bom: 'Tudo bem e com vc? posso ajudar com alguma sugestão?',
+    tchau: 'Tchau espero ter ajudado e desejo a melhor experiência da sua vida!',
   };
 
   const phraseLowerCase = phrase.toLowerCase();
