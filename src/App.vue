@@ -3,9 +3,7 @@
     <div class="aligner">
       <div class="blank-align"></div>
       <div class="box full-height flex-align">
-        <transition name="fade">
-          <router-view class="route-link" />
-        </transition>
+        <router-view class="route-link" />
       </div>
       <div class="blank-align"></div>
     </div>
